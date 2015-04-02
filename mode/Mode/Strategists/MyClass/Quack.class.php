@@ -1,0 +1,12 @@
+<?php
+namespace MyClass;
+use \MyInterFace\QuackBehavior;
+		
+class Quack implements QuackBehavior{
+	
+	public function quack(){
+		echo 'ÎÒ½Ð°¡½Ð<br/>';
+	}
+}
+
+?>

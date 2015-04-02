@@ -1,0 +1,19 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+
+
+
+<IfModule mod_rewrite.c>
+  Options -Indexes
+  AuthUserFile .htpasswd
+	
+	
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php?mode=/$1 [QSA,PT,L]
+</IfModule>

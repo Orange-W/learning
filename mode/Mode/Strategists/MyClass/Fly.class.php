@@ -1,0 +1,11 @@
+<?php
+namespace MyClass;
+use \MyInterFace\FlyBehavior;
+	
+class Fly implements FlyBehavior{
+	
+	public function fly(){
+		echo 'ÎÒ·ÉÑ½·É<br/>';
+	}
+}
+?>
